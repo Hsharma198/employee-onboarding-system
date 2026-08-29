@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Employee</title>
+</head>
+
+<body>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="success-message">
+                    ✅ {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+<h1>Add Employee</h1>
+
+<form method="POST">
+
+    <label>Name:</label>
+    <input type="text" name= "name">
+
+    <br><br>
+
+    <label>Email:</label>
+    <input type="email" name= "email">
+
+    <br><br>
+
+    <label>Department:</label>
+    <input type="text" name= "department">
+
+    <br><br>
+
+    <button type="submit">Save Employee</button>
+
+</form>
+
+</body>
+</html>

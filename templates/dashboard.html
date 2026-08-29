@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<div class="navbar">
+
+    <a href="/">Home</a>
+
+    <a href="/dashboard">Dashboard</a>
+
+    <a href="/logout">Logout</a>
+
+</div>
+
+<body>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>✅ {{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}        
+
+    <div class="container">
+
+        <h1>Employee HRMS Dashboard</h1>
+
+        <p>Welcome, <b>{{ session["username"] }}</b> 👋</p>
+
+        <div class="dashboard-buttons">
+
+            <a href="/add_employee" class="btn">➕ Add Employee</a>
+
+            <a href="/view_employees" class="btn">👥 View Employees</a>
+
+        </div>
+
+        <br>
+
+        <a href="/logout" class="logout-btn">Logout</a>
+
+    </div>
+
+</body>
+
+</html>

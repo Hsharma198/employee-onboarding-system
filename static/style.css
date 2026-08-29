@@ -1,0 +1,138 @@
+body {
+    text-align: Center;
+    font-family: Arial;
+}
+
+h1 {
+    color: blue;
+}
+
+p{
+    color: gray;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px;
+    font-size: 16px;
+}
+
+nav {
+    background-color: black;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 18px;
+}
+
+/* Dashboard */
+
+.container{
+    text-align:center;
+    margin-top:70px;
+}
+
+.dashboard-buttons{
+    margin-top:40px;
+}
+
+.dashboard-buttons .btn{
+
+    display:inline-block;
+    text-decoration:none;
+
+    background:blue;
+    color:white;
+
+    padding:15px 25px;
+
+    margin:10px;
+
+    border-radius:5px;
+
+    font-weight:bold;
+
+}
+
+.dashboard-buttons .btn:hover{
+
+    background:#001aff;
+
+}
+
+.logout-btn{
+
+    display:inline-block;
+
+    background:red;
+
+    color:white;
+
+    padding:12px 25px;
+
+    text-decoration:none;
+
+    border-radius:5px;
+
+    font-weight:bold;
+
+}
+
+.logout-btn:hover{
+
+    background:darkred;
+
+}
+
+/* Dashboard Navbar */
+
+.navbar{
+
+    background:black;
+
+    padding:18px;
+
+    text-align:center;
+
+}
+
+.navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:20px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+.navbar a:hover{
+
+    color:yellow;
+
+}
+
+
+/* Flash messages Navbar */
+
+
+.success-message{
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
