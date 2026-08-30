@@ -559,7 +559,7 @@ def logout():
     session.clear()
 
     flash("Logout Successfully")
-    return redirect("/login")
+    return redirect("/")
 
 
 #####-----------Dashboard part ----------
