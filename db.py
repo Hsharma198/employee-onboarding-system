@@ -5,7 +5,8 @@ def get_connection():
         database="hrms_db",
         user="postgres",
         password="admin123",
-        host="localhost",
+        # host="localhost",
+        host="postgres-container",
         port="5432"
     )
 
