@@ -403,6 +403,9 @@ def register():
 
         connection.commit()
         connection.close()
+
+        flash("User Registered Successfully")
+        
         return render_template(
             "dashboard.html",
             username=username,
@@ -426,9 +429,12 @@ def employee_register_api():
              password = data["password"]
              hashed_password = generate_password_hash(password)
              role = data["role"]
-     
+
+
              connection = get_connection()
              cursor = connection.cursor()
+
+
              # Check Duplicate Email
              cursor.execute(
                   """
@@ -445,9 +451,9 @@ def employee_register_api():
                   return jsonify({
                        "message": "Email already exists"
                   }), 400
+             
 
            # Insert New User
-
              cursor.execute(
                          """
                          INSERT INTO users
