@@ -101,7 +101,7 @@ def view_employees():
         "view_employees.html",
         employees=rows
     )
-####--------------------API Concept-----------------------
+####-----------------------------API Concept-----------------------
 
 @app.route("/api/employees")
 @jwt_required()
@@ -380,6 +380,10 @@ def delete_employee_api(id):
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+
+    if "username" not in session:
+            return redirect("/login")
+    
     if request.method == "POST":
 
         username = request.form["username"]
@@ -405,7 +409,7 @@ def register():
         connection.close()
 
         flash("User Registered Successfully")
-        
+
         return render_template(
             "dashboard.html",
             username=username,
